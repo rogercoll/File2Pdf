@@ -1,0 +1,21 @@
+{
+  "name": "doc2pdf",
+  "version": "1.0.0",
+  "description": "Converts any Word file no Pdf.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pdf",
+    "doc",
+    "docx"
+  ],
+  "author": "Roger Coll",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "formidable": "^1.1.1"
+  }
+}
