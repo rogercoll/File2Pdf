@@ -47,9 +47,20 @@ app.post('/upload', function(req, res){
 
 app.post('/convert', function(req,res){
   var data = req.body;
+  var com = "abiword --to=pdf ";
   for(var category in data){
     var fname = data.fitxers[category].Namefile;
-    console.log(fname);
+    	var auxiliar = com + "uploads/" + fname;
+	exec(auxiliar, function(err, stdout, stderr){
+		if(err){
+			console.log(err);
+		}
+		else{
+			console.log("Conversion of " + fname + " succesful");
+
+		}
+	});
+	console.log(fname);
   }
 });
 
