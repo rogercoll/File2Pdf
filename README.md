@@ -32,10 +32,11 @@ node server.js
 
 -Client:
 ```
-Open any browser and type(if client is another device from the same network change localhost to server ip address):
+Open any browser and type:
 localhost:3000
-
 ```
+
+If client is another device from the same network change localhost to server ip address.
 
 ### File interaction
 
