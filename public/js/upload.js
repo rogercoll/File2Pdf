@@ -185,6 +185,7 @@ function convertion(){
   }
   console.log(JSON.stringify(fil));
   console.log(fil);
+
   if(aux.length > 0){
     $.ajax({
         url: '/convert',
@@ -193,11 +194,22 @@ function convertion(){
         processData: false,
         contentType: 'application/json',
         success: function(data){
-          console.log("Starting conversion");
+          var gas = JSON.parse(data);
+          console.log(data);
+          console.log(gas.location);
+          /*
+          $.get( gas.location, function( data ) {
+            //alert( "Data Loaded: " + data );
+            $("html").html(data);
+          });
+          */
+          var loc = gas.location + "/" + gas.files + ".pdf";
+          window.location = loc;
         },
         error: function(a,b,c){
           console.log(c);
         }
+
     });
   }
 
