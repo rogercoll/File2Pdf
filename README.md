@@ -37,6 +37,18 @@ All files that the client will upload will be stored in the folder /uploads from
 
 ```javascript
 app.post('/convert', function(req,res){
+
   var data = req.body;
-  var com = "abiword --to=pdf "; //change that line and set de directory you want after the "=pdf"
+  var com = "abiword --to=pdf ";
+  var files = '"files" : ';
+  var os;
+  for(var i = 0; i < data.fitxers.length; ++i){
+    var fname = data.fitxers[i].Namefile;
+    var auxiliar = com + "uploads/" + fname; //add here the directory which you want to save the file(s)
 ```
+
+Went files are converted client will automaticaly download the final files. 
+
+##### Little issue
+
+For the moment the uploaded files can not have any dot(.) in the name file. Only the dot that the word after determines the file type. 
