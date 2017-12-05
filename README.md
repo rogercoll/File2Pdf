@@ -23,10 +23,18 @@ sudo apt-get install -y nodejs
 
 ### Usage
 
+- Server:
 ```
 git clone https://github.com/rogercoll/File2Pdf.git
 cd  /path/to/File2pdf 
 node server.js
+```
+
+-Client:
+```
+Open any browser and type(if client is another device from the same network change localhost to server ip address):
+localhost:3000
+
 ```
 
 ### File interaction
